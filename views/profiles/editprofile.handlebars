@@ -1,0 +1,44 @@
+<div class="container addprofileblock">
+    <h1 class="text-success font-weight-bold mt-2">Edit Profile</h1>
+    <form action="/profiles/editprofile/{{profile.id}}/?_method=PUT" method="POST" enctype="multipart/form-data">
+        <input type="hidden" name="_method" value="PUT">
+        {{!-- here we overriding the post property and making it as a put for update purpose --}}
+        <div class="form-group">
+            <label for="photo">Upload photo</label>
+            <input type="file" id="photo" name="photo" value="{{profile.photo.0.path}}" class="form-control"
+                placeholder="Upload photos...">
+        </div>
+        {{!-- that value thing we used for displaying the value already exist in database but we have and wecan change there --}}
+        <div class="row">
+            <div class="col-3">
+                <label for="firstname">FirstName</label>
+                <input type="text" id="firstname" name="firstname" value="{{profile.firstname}}" class="form-control"
+                    placeholder="First name">
+            </div>
+            <div class="col-3">
+                <label for="lastname">LastName</label>
+                <input type="text" id="lastname" name="lastname" value="{{profile.lastname}}" class="form-control mb-2"
+                    placeholder="Last name">
+            </div>
+
+            <div class="col-3">
+                <label for="email">Email</label>
+                <input type="email" class="form-control mb-2" name="email" value="{{profile.email}}"
+                    placeholder="Email">
+            </div>
+            <div class="col-3">
+                <label for="phonenumber">Phone Number</label>
+                <input type="text" class="form-control mb-2" name="phonenumber" value="{{profile.phonenumber}}"
+                    placeholder="phone number">
+            </div>
+            <div class="col-3">
+                <label for="location">Location</label>
+                <input type="text" class="form-control mb-2" name="location" value="{{profile.location}}"
+                    placeholder="Location">
+            </div>
+            <div class="form-group clear-fix mt-3 buttonBlock">
+                <button class="btn btn-primary float-right button">Update Profile</button>
+            </div>
+        </div>
+    </form>
+</div>

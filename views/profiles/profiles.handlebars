@@ -1,0 +1,40 @@
+{{!-- {{#each profile}}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-3">{{firstname}}</div>
+        <div class="col-md-3">{{lastname}}</div>
+        <div class="col-md-3">{{email}}</div>
+        <div class="col-md-3">{{phonenumber}}</div>
+        <div class="col-md-3">{{date}}</div>
+    </div>
+</div>
+{{else}}
+<h1>NO PROFILES FOUND</h1>
+{{/each}} --}}
+
+<div class="container mt-4 profileblock">
+    {{#each profile}}
+    <div class="card cardprofile">
+        <img src="{{trimArray photo.0.path}}" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="badge badge-danger float-right">{{formatRelative date postDate}} </h5>
+            <h5 class="text-primary text-uppercase"> {{firstname}}</h5>
+            <h5 class="text-primary text-uppercase"> {{lastname}}</h5>
+            <h5 class="text-primary text-lowercase">{{email}} </h5>
+            <h5 class="text-danger">{{phonenumber}}</h5>
+            <h5 class="badge badge-primary text-uppercase">{{location}}</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                card'scontent.</p>
+            <a href="/profile/editprofile/{{id}}" class="btn btn-primary">Edit profile</a>
+
+            <form action="/profile/deleteprofile/{{id}}?_method=DELETE" method="post" class="mt-2">
+                <input type="hidden" name="_method" value="DELETE">
+                <button type="submit" class="btn btn-danger btn-block">Delete</button>
+            </form>
+        </div>
+    </div>
+    {{else}}
+    <h1>NO PROFILE FOUND</h1>
+    {{/each}}
+</div>

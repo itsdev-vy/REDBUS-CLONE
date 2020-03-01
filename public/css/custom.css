@@ -1,0 +1,58 @@
+body {
+  padding: 0;
+  margin: 0;
+  background: #eee;
+}
+
+.addprofileblock {
+  margin: 30px auto;
+  padding: 10px;
+  background: #ffffff;
+  border: 1px solid #ccc;
+}
+
+.addprofileblock.buttonBlock {
+  display: block;
+  float: right !important;
+  width: 100%;
+  margin: 15px 15px;
+}
+
+/* .errors_data {
+  position: absolute;
+  background: #fff;
+  right: 0;
+  padding: 15px;
+  border: 1px solid red;
+} */
+
+.navbar {
+  background-color: #d84f57 !important;
+  height: 60px;
+  color: white;
+}
+
+.navbar a {
+  color: #fff;
+}
+.navbar-brand {
+  background: url("/images/nav.png");
+  height: 50px;
+  width: 120px;
+  background-repeat: no-repeat;
+}
+
+.profileblock {
+  display: flex;
+  justify-content: space-between;
+}
+.cardprofile {
+  width: 25%;
+}
+
+.card h5 {
+  font-weight: bold;
+  font-size: 15px;
+  text-transform: capitalize;
+  padding: 5px;
+}

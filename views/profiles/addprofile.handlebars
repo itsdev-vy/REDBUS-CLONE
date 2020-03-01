@@ -1,0 +1,44 @@
+<div>
+    {{#each errors}}
+    <div class="text-danger">{{text}}</div>
+    {{else}}
+    {{/each}}
+</div>
+{{!-- each is used for looping purpose --}}
+
+<div class="container addprofileblock">
+    <h1 class="text-success font-weight-bold mt-2">Add Profile</h1>
+    <form method="POST" action="/profiles/addprofile" enctype="multipart/form-data">
+        <div class="form-group">
+            <label for="photo">Upload photo</label>
+            <input type="file" id="photo" name="photo" class="form-control" placeholder="Upload photos...">
+        </div>
+        <div class="row">
+            <div class="col-3">
+                <label for="firstname">FirstName</label>
+                <input type="text" id="firstname" name="firstname" class="form-control" placeholder="First name">
+            </div>
+            <div class="col-3">
+                <label for="lastname">LastName</label>
+                <input type="text" id="lastname" name="lastname" class="form-control mb-2" placeholder="Last name">
+            </div>
+
+            <div class="col-3">
+                <label for="email">Email</label>
+                <input type="email" class="form-control mb-2" name="email" placeholder="Email">
+            </div>
+            <div class="col-3">
+                <label for="phonenumber">Phone Number</label>
+                <input type="text" class="form-control mb-2" name="phonenumber" placeholder="phone number">
+            </div>
+            <div class="col-3">
+                <label for="location">Location</label>
+                <input type="text" class="form-control mb-2" name="location" placeholder="Location">
+            </div>
+
+            <div class="form-group clear-fix mt-3 buttonBlock">
+                <button class="btn btn-success float-right button">add Profile</button>
+            </div>
+        </div>
+    </form>
+</div>
