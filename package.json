@@ -13,7 +13,7 @@
     "bootstrap": "^4.4.1",
     "express": "^4.17.1",
     "express-handlebars": "^3.1.0",
-    "handlebars": "^4.3.0",
+    "handlebars": "^4.7.7",
     "handlebars-dateformat": "^1.1.1",
     "handlebars-intl": "^1.1.2",
     "jquery": "^3.4.1",
