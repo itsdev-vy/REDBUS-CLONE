@@ -18,7 +18,7 @@
     "handlebars-intl": "^1.1.2",
     "jquery": "^3.4.1",
     "method-override": "^3.0.0",
-    "moment": "^2.24.0",
+    "moment": "^2.29.2",
     "mongoose": "^5.8.9",
     "multer": "^1.4.2"
   }
